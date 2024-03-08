@@ -81,7 +81,7 @@ router.get(
   async (req, res) => {
     req.session.user = req.user;
     req.session.login = true;
-    res.redirect("./products");
+    res.redirect("/products");
   }
 );
 

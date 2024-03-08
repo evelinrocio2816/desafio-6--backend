@@ -82,8 +82,8 @@ const initializePassport = () => {
     "github",
     new GitHubStrategy(
       {
-        clientID: " Iv1.40afe1a58e1368fb",
-        secretClient: "1d2941d6666651fa21f03ff562fa6dc529f6e9aa",
+        clientID: "Iv1.bbd6c94a8d592fa9",
+        clientSecret: "31a0a8185f59ab6d185ae68eba993dcb3ec7b6da",
         callbackURL: "http://localhost:8080/api/session/githubcallback"
       },
       async (accessToken, refreshToken, profile, done) => {
@@ -97,7 +97,7 @@ const initializePassport = () => {
               age: 29,
               email: profile._json.email,
               password: ""
-            };
+            }
             let result = await UserModel.create(newUser);
             done(null, result);
           } else {
