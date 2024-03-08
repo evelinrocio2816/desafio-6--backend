@@ -23,12 +23,12 @@ const UserSchema=mongoose.Schema({
     age: {
         type: Number,
       // required: true,
-    },
-    role: {
-        type: String,
-        enum: ['admin', 'user'],
-        default: 'user'
     }
+   // role: {
+   //     type: String,
+   //     enum: ['admin', 'user'],
+   //     default: 'user'
+   // }
 });
 
 const UserModel = mongoose.model("user", UserSchema);

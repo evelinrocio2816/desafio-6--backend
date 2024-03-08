@@ -1,6 +1,7 @@
 
 <h1>Para ingresar, inicia sesión o regístrate</h1>
 <div class="container-login">
+    <div class="container-loginForm">
     <form action="/api/session/login" method="POST">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required placeholder="adminCoder@coder.com">
@@ -8,16 +9,14 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
         <br>
-        <label for="role">Selecciona tu rol:</label>
-        <select id="role" name="role">
-            <option value="usuario">Usuario</option>
-            <option value="admin">Administrador</option>
-        </select>
+     
         <br>
         <button type="submit">Login</button>
-        <p>Si no tienes cuenta, regístrate</p>
-        <button><a href="/register">Sign Up</a></button>
-          <button><a href="/api/session/github"></a>GitHub</button>
+       
     </form>
- 
+    </div>
+  <p>Si no tienes cuenta, regístrate</p>
+        <a href="/register"><button>Sign Up</button></a>
+        <p>Ingresar con GitHub</p>
+        <a href="/api/session/github" target="_blank"> <button>GitHub</button></a>
 </div> 
