@@ -63,7 +63,7 @@ router.post("/login", passport.authenticate("login", {failureRedirect: "/api/ses
 
 router.get("/faillogin", async (req, res ) => {
     console.log("Fallo la estrategia")
-    res.send({error: "registro Fallido"});
+    res.send({error: "Usuarios y/o contraseñas incorrectos"});
 })
 
 
